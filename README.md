@@ -4,7 +4,7 @@ docker run -d -p 8080:8080 \
   -e MYSQL_PORT=3306 \
   -e MYSQL_DB=persondb \
   -e MYSQL_USER=root \
-  -e MYSQL_PASSWORD=root 
+  -e MYSQL_PASSWORD=person 
 ```
 
 
@@ -18,11 +18,11 @@ MYSQL_HOST=demo-db
 MYSQL_PORT=3306
 MYSQL_DB=persondb
 MYSQL_USER=root
-MYSQL_PASSWORD=
+MYSQL_PASSWORD=person
 
 ENV_db
 MYSQL_DATABASE=persondb
-MYSQL_ALLOW_EMPTY_PASSWORD=yes
+MYSQL_ROOT_PASSWORD=person
 ```
 
 
