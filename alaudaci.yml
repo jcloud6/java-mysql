@@ -4,6 +4,7 @@ pre_ci_boot:
   tag: "latest"
 ci:
   - cp Dockerfile $ALAUDACI_DEST_DIR
+  - cp server.xml $ALAUDACI_DEST_DIR
   - cp ./pom.xml /opt/pom.xml
   - cp -r ./src /opt/src
   - cd /opt/
