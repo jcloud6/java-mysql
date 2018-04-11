@@ -1,0 +1,14 @@
+version: "0.1.0"
+pre_ci_boot:
+  image: 10.6.0.10:5000/centos6-jdk7-maven3
+  tag: "latest"
+ci:
+  - cp Dockerfile $ALAUDACI_DEST_DIR
+  - cp ./pom.xml /pom.xml
+  - cp ./pom.xml /code/pom.xml
+  - cp -r ./src /code/src
+  - cd /
+  - mvn dependency:go-offline
+  - cd /code
+  - mvn package 
+  - cp target/demo.war $ALAUDACI_DEST_DIR
