@@ -1,7 +1,7 @@
 version: "0.1.0"
 pre_ci_boot:
-  image: 10.6.0.10:5000/centos6-jdk7-maven3:java-mysql-offline
-  tag: "latest"
+  image: 10.6.0.10:5000/centos6-jdk7-maven3
+  tag: "java-mysql-offline"
 ci:
   - cp Dockerfile $ALAUDACI_DEST_DIR
   - cp server.xml $ALAUDACI_DEST_DIR
