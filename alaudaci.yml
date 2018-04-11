@@ -5,10 +5,8 @@ pre_ci_boot:
 ci:
   - cp Dockerfile $ALAUDACI_DEST_DIR
   - cp ./pom.xml /pom.xml
-  - cp ./pom.xml /code/pom.xml
-  - cp -r ./src /code/src
+  - cp -r ./src /src
   - cd /
   - mvn dependency:go-offline
-  - cd /code
   - mvn package 
   - cp target/demo.war $ALAUDACI_DEST_DIR
